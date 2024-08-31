@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #3c6fff, #2f4f9b);
+}
+
+.container {
+  width: min(90%, 500px);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-color: #ffffff;
+  padding: 3em 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.5em;
+  color: #333333;
+}
+
+.input-wrapper {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.2em;
+  margin: 2em auto 1em auto;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 0.8em;
+  font-size: 1.1em;
+  text-align: center;
+  border: 2px solid #b0b0b0;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f9f9f9;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"]:focus {
+  border-color: #3c6fff;
+  background-color: #ffffff;
+}
+
+button {
+  font-size: 1.1em;
+  background-color: #3c6fff;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 0.8em 1.5em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #3457d1;
+  transform: scale(1.05);
+}
+
+#restart {
+  margin: 1em auto 0;
+  padding: 0.8em 1.2em;
+  display: none;
+  background-color: #ff6f6f;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.result {
+  margin-top: 1.5em;
+}
+
+p {
+  font-size: 1em;
+  font-weight: 400;
+  color: #4a4a4a;
+  word-break: break-word;
+}
+
+.error,
+.success {
+  padding: 0.8em;
+  border-radius: 8px;
+  margin-bottom: 1.5em;
+  animation: pop 0.4s ease-out;
+  transform: scale(0);
+}
+
+.error {
+  background-color: #ffdddd;
+  color: #d9534f;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #28a745;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
